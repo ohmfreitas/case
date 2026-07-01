@@ -98,40 +98,65 @@
   @media (max-width:640px){#s1 .cover-context,#s1 .cover-roadmap{margin-left:0;margin-right:0}#s1 .cover-summary-label{width:min(88vw,340px);margin:10px 0 7px;text-align:left;font-size:8px;letter-spacing:.1em}}
   @media (max-height:720px){#s1 .logo{width:min(210px,34vw);margin-bottom:2.8vh}#s1 .cover-context{margin-top:2vh}#s1 .cover-roadmap{margin-top:1.8vh}}
 
-  /* === Mobile: slides scrolláveis, layouts em coluna única === */
+  /* === Mobile: scroll confiável via display:block === */
   @media (max-width:640px){
-    .slide{overflow-y:auto;justify-content:flex-start;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:3.5vh 5vw 6vh}
+    /* display:block garante overflow-y:auto em todos browsers mobile */
+    .slide{display:block !important;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:3.5vh 5vw 6vh}
     .slide::-webkit-scrollbar{display:none}
-    h2.head{white-space:normal !important;margin-bottom:10px}
-    .row2,.row3,.row4,.grid-auto,.kpi-row,.rulegrid,.assess-grid,.pair,.split{grid-template-columns:1fr !important;gap:10px !important}
+    /* Tipografia */
+    h2.head{white-space:normal !important;margin-bottom:8px;font-size:clamp(1.3rem,5.5vw,1.9rem) !important}
+    .eyebrow{margin-bottom:8px}
+    /* Perguntas: padding reduzido, texto menor */
+    .question{padding:10px 14px 10px 16px !important;margin-bottom:10px}
+    .question .t{font-size:.93rem !important;line-height:1.35}
+    /* Grids → coluna única */
+    .row2,.row3,.row4,.grid-auto,.kpi-row,.rulegrid,.assess-grid,.pair,.split{grid-template-columns:1fr !important;gap:9px !important}
     .wide{grid-column:unset}
+    /* Cards: mais compactos */
+    .card{padding:11px 13px !important}
+    .card h3{font-size:.98rem}
+    .card h4{font-size:.9rem;margin-bottom:5px}
+    .card li,.card p{font-size:.82rem;line-height:1.35}
+    .card ul{gap:5px}
+    .note{margin-top:8px;font-size:.82rem;padding:9px 12px 9px 14px}
+    .stack{gap:8px}
+    /* Tabelas: scroll horizontal, fonte reduzida */
+    .table-card{overflow-x:auto;-webkit-overflow-scrolling:touch}
+    table{min-width:400px;font-size:.74rem}
+    th,td{padding:6px 8px}
+    /* s5 Definição proposta: tabela ainda mais compacta */
+    #s5 .table-card table{min-width:320px;font-size:.68rem}
+    #s5 th,#s5 td{padding:5px 6px;white-space:nowrap}
+    /* Gantt */
     .gantt-shell{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px}
     .gantt{min-width:540px}
     .deps{display:none}
-    .table-card{overflow-x:auto}
-    table{min-width:460px}
+    /* KPI */
     .kpi-card{min-height:auto !important}
-    .kb-slot{height:auto !important;min-height:60px}
+    /* KB geral */
+    .kb-slot{height:auto !important;min-height:50px}
     .kb{grid-template-columns:1fr 1fr !important;gap:8px !important}
-    .eyebrow{margin-bottom:10px}
-    .question{margin-bottom:12px}
-    .note{margin-top:10px}
-    .stack{gap:10px}
-    .assess-grid{gap:10px !important}
-    /* Slide de Operacionalização: boards com scroll horizontal */
-    #s8b .op-sub{white-space:normal !important}
-    #s8b .opwrap{gap:10px}
-    #s8b .opboard{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+    /* === Operacionalização #s8b === */
+    #s8b .op-sub{white-space:normal !important;font-size:.88rem}
+    #s8b .opwrap{gap:8px}
+    #s8b .opboard{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:3px}
     #s8b .opboard::-webkit-scrollbar{display:none}
-    #s8b .kb{grid-template-columns:repeat(4,minmax(108px,1fr)) !important;gap:6px !important}
-    #s8b .kb-slot{height:auto !important;max-height:160px;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}
-    #s8b .op-footer{flex-direction:column;gap:8px;margin-top:10px;align-items:stretch}
-    #s8b .kbbtn{width:100%;text-align:center}
-    #s8b .op-hint{font-size:9px;text-align:center}
+    /* 4 colunas menores com scroll horizontal */
+    #s8b .kb{grid-template-columns:repeat(4,minmax(84px,1fr)) !important;gap:4px !important}
+    #s8b .kb-slot{height:auto !important;max-height:120px;overflow-y:auto;overflow-x:hidden;scrollbar-width:thin}
+    .kbflow[data-flow="op"] .kb-col{padding:5px 6px 7px;border-radius:9px}
+    .kbflow[data-flow="op"] .kb-col h4{font-size:7.5px;letter-spacing:.04em}
+    .kbflow[data-flow="op"] .kb-card{padding:4px 6px;border-radius:7px}
+    .kbflow[data-flow="op"] .kb-card .ttl{font-size:.68rem;line-height:1.08}
+    .kbflow[data-flow="op"] .kb-card .epic{font-size:6.5px;margin-bottom:1px}
+    .kbflow[data-flow="op"] .kb-chip{font-size:6.5px;padding:1px 4px}
+    #s8b .op-footer{flex-direction:column;gap:8px;margin-top:8px;align-items:stretch}
+    #s8b .kbbtn{width:100%;text-align:center;padding:10px 14px;font-size:10px}
+    #s8b .op-hint{font-size:8px;text-align:center;line-height:1.4}
   }
-  /* Landscape em tela pequena: scroll vertical dentro do slide */
+  /* Landscape mobile: scroll vertical dentro do slide */
   @media (max-width:900px) and (orientation:landscape){
-    .slide{overflow-y:auto;justify-content:flex-start;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .slide{display:block !important;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none}
     .slide::-webkit-scrollbar{display:none}
   }
 
