@@ -25,7 +25,7 @@
   .eyebrow{font-family:var(--mono);font-size:clamp(10px,1.15vw,13px);letter-spacing:.24em;text-transform:uppercase;color:var(--teal-800);display:flex;align-items:center;gap:12px;margin-bottom:18px}.eyebrow .n{color:var(--coral);font-weight:700}.eyebrow::before{content:"";width:34px;height:2px;background:var(--coral);border-radius:2px}.dark .eyebrow{color:var(--teal)}
   h1.title,h2.head{font-family:var(--display);font-weight:800;color:var(--teal-ink);line-height:1;letter-spacing:-.025em}h1.title{font-size:clamp(2.8rem,8vw,6rem);max-width:13ch}h2.head{font-size:clamp(2rem,5.2vw,4.05rem);max-width:18ch}.dark h1.title,.dark h2.head{color:#fff}h1.title em,h2.head em{font-style:normal;color:var(--coral)}.dark h2.head em{color:var(--teal)}
   .sub{font-size:clamp(1rem,1.9vw,1.32rem);color:var(--muted);max-width:58ch;margin-top:20px;line-height:1.42}.dark .sub{color:#b8d7dc}.cap{font-family:var(--mono);font-size:clamp(10px,1.05vw,12px);color:var(--muted);letter-spacing:.04em;margin-top:16px;line-height:1.45}.dark .cap{color:#8db1b7}.logo{width:min(250px,40vw);height:auto;margin-bottom:6vh}
-  .question{background:rgba(255,255,255,.8);border:1px solid var(--line);border-left:4px solid var(--coral);border-radius:16px;padding:14px 18px;margin:0 0 22px;box-shadow:0 18px 38px -30px rgba(16,65,74,.45)}.question .q{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:var(--teal-800);font-weight:700;margin-bottom:5px}.question .t{font-family:var(--display);font-weight:700;color:var(--teal-ink);font-size:clamp(1rem,1.7vw,1.35rem);line-height:1.18}
+  .question{width:100%;max-width:100%;min-width:0;overflow:visible;background:rgba(255,255,255,.8);border:1px solid var(--line);border-left:4px solid var(--coral);border-radius:16px;padding:14px 18px;margin:0 0 22px;box-shadow:0 18px 38px -30px rgba(16,65,74,.45)}.question .q{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:var(--teal-800);font-weight:700;margin-bottom:5px;overflow-wrap:anywhere}.question .t{display:block;max-width:100%;white-space:normal;overflow-wrap:break-word;text-wrap:pretty;font-family:var(--display);font-weight:700;color:var(--teal-ink);font-size:clamp(1rem,1.7vw,1.35rem);line-height:1.18}
   .row2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.5vw,28px);align-items:stretch}.row3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.6vw,18px)}.row4{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,16px)}.grid-auto{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.6vw,18px)}
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:clamp(14px,1.8vw,20px);box-shadow:0 18px 40px -30px rgba(16,65,74,.5);position:relative;overflow:hidden}.card::before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:var(--teal)}.card.coral::before{background:var(--coral)}.card.darkcard{background:#0f3a43;border-color:rgba(97,193,208,.24);color:#dff5f7}.card.darkcard h3,.card.darkcard h4{color:#fff}.card.darkcard p,.card.darkcard li{color:#c3dce0}
   .card h3{font-family:var(--display);font-size:clamp(1.1rem,1.7vw,1.55rem);line-height:1.05;color:var(--teal-ink);margin-bottom:10px}.card h4{font-family:var(--display);font-size:clamp(.98rem,1.3vw,1.2rem);color:var(--teal-ink);margin-bottom:8px}.card p{color:var(--muted);font-size:clamp(.84rem,1.12vw,1.02rem);line-height:1.42}.card ul{list-style:none;display:grid;gap:7px;margin-top:6px}.card li{font-size:clamp(.82rem,1.05vw,.98rem);line-height:1.35;color:var(--muted);position:relative;padding-left:17px}.card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--coral);position:absolute;left:0;top:.55em}.badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-800);background:rgba(97,193,208,.13);border:1px solid rgba(55,162,179,.28);padding:5px 10px;border-radius:999px;margin-top:12px;font-weight:700}.badge.red{color:var(--coral-700);background:rgba(213,62,54,.08);border-color:rgba(213,62,54,.25)}
@@ -76,6 +76,7 @@
     box-shadow:0 16px 38px -30px rgba(16,65,74,.55);transition:opacity .25s ease,transform .25s ease,color .2s ease;
   }
   .brandmark img{width:90px;height:auto;display:block}.brandmark span{white-space:nowrap}.title-slide .brandmark{opacity:0;transform:translateY(-8px);pointer-events:none}.dark-rail .brandmark{background:rgba(12,47,55,.70);border-color:rgba(97,193,208,.22);color:var(--teal)}
+  .brandmark{display:none!important}
   #s1{align-items:flex-start;background:radial-gradient(90% 78% at 86% -4%,rgba(97,193,208,.26),transparent 58%),radial-gradient(72% 68% at 8% 108%,rgba(213,62,54,.10),transparent 58%),linear-gradient(135deg,#f8fdfe 0%,#eef8fa 100%)}
   #s1 .logo{width:min(245px,38vw);margin-bottom:4.4vh;filter:drop-shadow(0 16px 22px rgba(16,65,74,.12))}
   #s1 h1.title{width:min(900px,100%);max-width:min(900px,100%);min-width:0}
@@ -193,10 +194,10 @@
     background:linear-gradient(180deg,rgba(255,255,255,.88),rgba(255,255,255,.72));
     border-color:rgba(211,231,234,.92);border-left:0;border-radius:18px;padding:16px 20px 16px 22px;
     box-shadow:0 24px 55px -38px rgba(16,65,74,.55), inset 0 0 0 1px rgba(255,255,255,.55);
-    position:relative;overflow:hidden;
+    position:relative;overflow:visible;width:100%;max-width:100%;min-width:0;
   }
   .question::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--coral),#ff8b82)}
-  .question .q{color:var(--coral-700);font-size:9.5px}.question .t{font-size:clamp(1.02rem,1.45vw,1.28rem);max-width:82ch}
+  .question .q{color:var(--coral-700);font-size:9.5px;overflow-wrap:anywhere}.question .t{font-size:clamp(1.02rem,1.45vw,1.28rem);max-width:100%;white-space:normal;overflow-wrap:break-word;text-wrap:pretty}
   .card,.rulecard,.table-card,.note,.gantt-shell{
     border-color:rgba(211,231,234,.92);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.84));
     box-shadow:0 26px 62px -46px rgba(16,65,74,.66), inset 0 0 0 1px rgba(255,255,255,.52);
@@ -215,9 +216,9 @@
   .float-tip{position:fixed;z-index:100;max-width:360px;min-width:300px;background:linear-gradient(160deg,#09252b,#0d3840);color:#dff5f7;border:1px solid rgba(97,193,208,.38);border-radius:18px;padding:15px 16px;box-shadow:0 34px 80px -30px rgba(0,0,0,.75),inset 0 0 0 1px rgba(255,255,255,.04);opacity:0;visibility:hidden;pointer-events:none;transform:translate(12px,12px) scale(.98);transition:opacity .12s ease,transform .12s ease,visibility .12s;font-family:var(--body)}.float-tip.show{opacity:1;visibility:visible;pointer-events:auto;transform:translate(12px,12px) scale(1);max-height:min(82vh,620px);overflow-y:auto}.float-tip .pill{display:inline-flex;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#ff9b8f;background:rgba(213,62,54,.10);border:1px solid rgba(213,62,54,.28);border-radius:999px;padding:4px 9px;margin-bottom:9px}.float-tip h5{font-family:var(--display);font-size:1.12rem;line-height:1.05;color:#fff;margin:0 0 8px}.float-tip p{color:#c6e1e5;font-size:.93rem;line-height:1.35;margin:0 0 10px}.float-tip dl{display:grid;grid-template-columns:92px 1fr;gap:6px 10px;margin:0}.float-tip dt{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#82cbd5}.float-tip dd{font-size:.86rem;line-height:1.25;color:#e2f5f7}
   .card.darkcard,.verdict{background:linear-gradient(180deg,rgba(15,58,67,.95),rgba(10,43,50,.92));border-color:rgba(97,193,208,.25);box-shadow:0 30px 70px -42px rgba(0,0,0,.78)}.stamp{background:rgba(213,62,54,.08)}
   .nav{right:3.2vw}.nav button{backdrop-filter:blur(10px)}.dots{top:3.7vh}.counter{left:3.2vw}.hint{right:3.2vw}
-  #s13.spotlight{background:radial-gradient(74% 70% at 86% 10%,rgba(244,178,96,.18),transparent 58%),radial-gradient(76% 70% at 6% 110%,rgba(97,193,208,.16),transparent 62%),linear-gradient(135deg,#17251e 0%,#123940 48%,#091d22 100%);color:#eaf7f6}
-  #s13.spotlight::after{background:linear-gradient(90deg,rgba(255,255,255,.08),transparent 30%),repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 96px)}
-  #s13 .eyebrow{color:#99d9d5}#s13 .eyebrow .n{color:#f4b260}#s13 .eyebrow::before{background:#f4b260}#s13 h2.head{color:#fff;max-width:22ch}#s13 h2.head em{color:#f4b260}
+  #s8b.spotlight,#s13.spotlight{background:radial-gradient(74% 70% at 86% 10%,rgba(244,178,96,.18),transparent 58%),radial-gradient(76% 70% at 6% 110%,rgba(97,193,208,.16),transparent 62%),linear-gradient(135deg,#17251e 0%,#123940 48%,#091d22 100%);color:#eaf7f6}
+  #s8b.spotlight::after,#s13.spotlight::after{background:linear-gradient(90deg,rgba(255,255,255,.08),transparent 30%),repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 96px)}
+  #s8b .eyebrow,#s13 .eyebrow{color:#99d9d5}#s8b .eyebrow .n,#s13 .eyebrow .n{color:#f4b260}#s8b .eyebrow::before,#s13 .eyebrow::before{background:#f4b260}#s8b h2.head,#s13 h2.head{color:#fff}#s13 h2.head{max-width:22ch}#s8b h2.head em,#s13 h2.head em{color:#f4b260}
   #s13 .question{background:rgba(8,30,35,.62);border-color:rgba(153,217,213,.24);box-shadow:0 28px 65px -42px rgba(0,0,0,.82),inset 0 0 0 1px rgba(255,255,255,.04)}
   #s13 .question .q{color:#f4b260}#s13 .question .t{color:#eaf7f6}
   #s13 .spot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -228,7 +229,67 @@
   #s13 .spot-card p{font-size:clamp(.84rem,1.02vw,.96rem);line-height:1.38;color:#cfe7e5}
   #s13 .spot-note{margin-top:14px;border:1px solid rgba(244,178,96,.24);border-radius:18px;background:rgba(244,178,96,.08);padding:13px 17px;color:#f1dfc8;font-size:clamp(.86rem,1vw,.98rem);line-height:1.36}
   #s13 .spot-note b{color:#fff}
+  #s8b .op-sub{color:#cfe7e5}#s8b .opboard-label{color:#f4b260}
+  #s8b .kb-col{background:rgba(255,255,255,.08);border-color:rgba(153,217,213,.24);box-shadow:inset 0 0 0 1px rgba(255,255,255,.035)}
+  #s8b .kb-col h4{color:#d7efed}#s8b .kb-col.commit{background:rgba(244,178,96,.12);border-color:rgba(244,178,96,.42)}#s8b .kb-col .cp{color:#f4b260}
+  #s8b .kb-card{background:rgba(255,255,255,.96);border-color:rgba(211,231,234,.88);box-shadow:0 18px 38px -28px rgba(0,0,0,.6)}#s8b .kb-card.rel{background:#f3fbf7}#s8b .kb-card.sel{outline-color:#f4b260}
+  #s8b .op-hint{color:#cfe7e5}#s8b .kbbtn{background:rgba(255,255,255,.10);border-color:rgba(153,217,213,.34);color:#eaf7f6}#s8b .kbbtn:hover{background:rgba(255,255,255,.16)}#s8b .kbbtn.primary{background:#f4b260;color:#102f34;border-color:#f4b260}#s8b .kbbtn.primary:hover{background:#ffd08f}
+  #s9{justify-content:flex-start;overflow-y:auto;scrollbar-width:none;padding-top:5.4vh;padding-bottom:5.6vh}
+  #s9::-webkit-scrollbar{display:none}
+  #s9 h2.head{margin-bottom:9px}
+  #s9 .question{padding:10px 14px 10px 16px;margin-bottom:10px;border-radius:14px}
+  #s9 .question .q{font-size:8.4px;letter-spacing:.11em;margin-bottom:4px}
+  #s9 .question .t{font-size:clamp(.84rem,1vw,.98rem);line-height:1.23}
+  #s9 .jira-cards-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(9px,1.1vw,14px);align-items:stretch}
+  #s9 .jira-mini{background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.84));border:1px solid rgba(211,231,234,.92);border-radius:15px;padding:13px 13px 12px;box-shadow:0 24px 50px -42px rgba(16,65,74,.65);position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:0}
+  #s9 .jira-mini::before{content:"";position:absolute;left:0;top:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal-600),var(--teal))}
+  #s9 .jira-mini.v2::before{background:linear-gradient(90deg,#d98a1f,#f4b260)}
+  #s9 .jira-mini.v3::before{background:linear-gradient(90deg,var(--coral-700),var(--coral))}
+  #s9 .jira-key{font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--coral-700);font-weight:700;margin-bottom:6px}
+  #s9 .jira-priority{display:inline-flex;font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:4px 8px;margin-bottom:7px;border:1px solid rgba(97,193,208,.28);background:rgba(97,193,208,.1);color:var(--teal-800);font-weight:700}
+  #s9 .jira-priority.p0{border-color:rgba(213,62,54,.28);background:rgba(213,62,54,.08);color:var(--coral-700)}
+  #s9 .jira-priority.p2{border-color:rgba(217,138,31,.28);background:rgba(244,178,96,.12);color:#9b5a08}
+  #s9 .jira-priority.p3{border-color:rgba(155,179,182,.42);background:rgba(155,179,182,.12);color:#58777b}
+  #s9 .jira-tags{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 7px}
+  #s9 .jira-tag{font-family:var(--mono);font-size:7.5px;line-height:1.15;text-transform:uppercase;letter-spacing:.06em;color:#5b7e84;background:rgba(230,243,245,.8);border:1px solid rgba(211,231,234,.9);border-radius:7px;padding:3px 5px}
+  #s9 .jira-tag b{color:var(--teal-ink)}
+  #s9 .jira-card-flow{font-family:var(--mono);font-size:7.2px;letter-spacing:.035em;text-transform:uppercase;color:#8aa4a8;border-top:1px solid rgba(211,231,234,.8);padding-top:6px;margin-top:auto}
+  #s9 .jira-card-flow b{color:#78979c}
+  #s9 .jira-mini h4{font-family:var(--display);font-size:1.02rem;line-height:1.05;color:var(--teal-ink);margin-bottom:7px}
+  #s9 .jira-mini p{font-size:.76rem;line-height:1.22;color:#59797e;margin-top:4px}
+  #s9 .jira-mini p b{color:var(--teal-ink)}
+  #s9 .jira-flow-note{margin-top:10px;border:1px solid rgba(213,62,54,.2);border-radius:14px;background:rgba(255,255,255,.76);padding:10px 14px;color:#59797e;font-size:.82rem;line-height:1.28}
+  #s9 .jira-flow-note b{color:var(--teal-ink)}
+  @media (max-width:1180px){
+    #s9 .jira-cards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+  @media (max-height:780px) and (min-width:641px){
+    #s9{padding-top:4.8vh}
+    #s9 h2.head{font-size:clamp(1.9rem,4.2vw,3.4rem);margin-bottom:10px}
+    #s9 .question{padding:8px 12px 8px 14px;margin-bottom:8px}
+    #s9 .question .t{font-size:.78rem;line-height:1.18}
+    #s9 .jira-mini{padding:11px 12px 10px}
+    #s9 .jira-mini h4{font-size:.95rem;margin-bottom:5px}
+    #s9 .jira-mini p{font-size:.72rem;line-height:1.17}
+    #s9 .jira-tags{margin-bottom:5px}
+    #s9 .jira-tag{font-size:7px;padding:2px 5px}
+    #s9 .jira-priority{font-size:7.3px;padding:3px 7px;margin-bottom:5px}
+    #s9 .jira-card-flow{font-size:6.7px;padding-top:5px}
+    #s9 .jira-flow-note{font-size:.76rem;padding:8px 12px;margin-top:8px}
+  }
   @media (max-width:640px){
+    #s9{padding:3.4vh 5vw 7vh;overflow-y:auto}
+    #s9 .question{padding:9px 11px 9px 13px;margin-bottom:8px}
+    #s9 .question .t{font-size:.78rem!important;line-height:1.28}
+    #s9 .jira-cards-grid{grid-template-columns:1fr!important;gap:8px}
+    #s9 .jira-mini{border-radius:13px;padding:10px 12px}
+    #s9 .jira-priority{font-size:7px;padding:3px 7px;margin-bottom:5px}
+    #s9 .jira-tags{gap:3px;margin-bottom:5px}
+    #s9 .jira-tag{font-size:6.7px;padding:3px 5px}
+    #s9 .jira-card-flow{font-size:6.8px;padding-top:6px;margin-top:8px}
+    #s9 .jira-mini h4{font-size:.9rem;margin-bottom:5px}
+    #s9 .jira-mini p{font-size:.76rem;line-height:1.28;margin-top:4px}
+    #s9 .jira-flow-note{font-size:.78rem;line-height:1.3;padding:9px 11px;margin-top:8px}
     #s13.spotlight{padding:3.4vh 5vw 7vh;overflow-y:auto}
     #s13 .eyebrow{font-size:8.5px;letter-spacing:.14em;gap:8px;margin-bottom:8px}
     #s13 .eyebrow::before{width:24px}
@@ -357,8 +418,8 @@
   </div>
   <p class="cover-summary-label">Resumo das soluções propostas</p>
   <div class="cover-roadmap">
-    <div class="card phase"><span class="tag">Resumo · Fase 1</span><h3>Fonte oficial sem mexer na origem</h3><ul><li>Define paciente ativo e regras de recência</li><li>Integra Amei, WebDental, Communicare e fontes validadas</li><li>Publica uma base confiável para as áreas consumidoras</li></ul><span class="badge">Entrega v1</span></div>
-    <div class="card phase coral"><span class="tag">Resumo · Fase 2</span><h3>Correção estrutural na origem</h3><ul><li>Unifica cadastro e chaves de identidade</li><li>Reduz duplicidade e esforço de reconciliação</li><li>Conecta com opt-in único e decisões de grupo</li></ul><span class="badge red">Evolução</span></div>
+    <div class="card phase"><span class="tag">Resumo · Fase 1</span><h3>Fonte oficial sem mexer na origem</h3><ul><li>Define paciente ativo e regras de recência</li><li>Integra Amei e WebDental; Communicare e demais fontes entram se confirmadas e modeladas</li><li>Publica uma base confiável para as áreas consumidoras</li></ul><span class="badge">Entrega v1</span></div>
+    <div class="card phase coral"><span class="tag">Resumo · Fase 2</span><h3>Correção estrutural na origem</h3><ul><li>Unifica cadastro e chaves de identidade</li><li>Reduz duplicidade e esforço de reconciliação</li><li>Prepara consumo do opt-in único do grupo</li></ul><span class="badge red">Evolução</span></div>
   </div>
 </section>
 
@@ -384,7 +445,7 @@
   <div class="question"><p class="q">Pergunta</p><p class="t">Quais seriam os principais stakeholders?</p></div>
   <div class="row2">
     <div class="card"><h4>Detentores das fontes</h4><ul><li><b>Área de Dados</b> <span class="micro">Vinícius Massullo; dono do Lake e facilitador para acessar as fontes</span></li><li><b>Produtos Medicina</b> <span class="micro">regras de negócio do Amei</span></li><li><b>Produtos Odontologia</b> <span class="micro">regras de negócio do WebDental e DentalVidas</span></li></ul></div>
-    <div class="card coral"><h4>Detentores pendentes de confirmação</h4><ul><li><b>Communicare</b> <span class="micro">Telemedicina; confirmar paciente ativo exclusivo nessa fonte</span></li><li><b>Ploomies</b> <span class="micro">AmorCirurgia; confirmar se é downstream do Amei ou fonte independente</span></li><li><b>Pardini</b> <span class="micro">AmorLab; confirmar se é downstream do Amei ou fonte independente</span></li><li><b>DB</b> <span class="micro">AmorLab; confirmar se é downstream do Amei ou fonte independente</span></li></ul></div>
+    <div class="card coral"><h4>Fonte provável e pendências</h4><ul><li><b>Communicare</b> <span class="micro">Telemedicina; fonte mais provável, mas ainda depende de confirmação e modelagem</span></li><li><b>Ploomies</b> <span class="micro">AmorCirurgia; confirmar se é downstream do Amei ou fonte independente</span></li><li><b>Pardini</b> <span class="micro">AmorLab; confirmar se é downstream do Amei ou fonte independente</span></li><li><b>DB</b> <span class="micro">AmorLab; confirmar se é downstream do Amei ou fonte independente</span></li></ul></div>
   </div>
   <div class="row2" style="margin-top:14px">
     <div class="card"><h4>Sponsors</h4><ul><li>Diretoria de Operações</li><li>Diretoria de Marketing e CRM</li><li>Diretoria Financeira <span class="micro">Projetos e Inteligência de Negócios</span></li></ul><p class="micro" style="margin-top:8px">Inteligência de Negócios apoia regras de negócio e entrega dashboards aos consumidores.</p></div>
@@ -400,7 +461,7 @@
   <div class="row2">
     <div class="card"><h4>Cadastro não unificado e base suja</h4><p><b>Risco:</b> o mesmo paciente pode ser duplicado ou triplicado quando fontes não validam CPF.</p><p style="margin-top:8px"><b>Mitigação:</b> validação com campos complementares ao CPF, como CNS, RG, nome, data de nascimento e nome da mãe.</p></div>
     <div class="card coral"><h4>Político-estrutural</h4><p><b>Risco:</b> muitos sponsors, de diretorias diferentes, podem gerar objetivos distintos para o indicador principal.</p><p style="margin-top:8px"><b>Mitigação:</b> entregar o mesmo indicador com recortes personalizados por área, com DPO atuando em clareza de escopo e relacionamento.</p></div>
-    <div class="card"><h4>Ingestão e modelagem de fontes externas</h4><p><b>Risco:</b> Communicare em modelagem e Ploomies sem camada de regra de negócio aplicada podem atrasar o v1 ou deixar lacunas.</p><p style="margin-top:8px"><b>Mitigação:</b> envolver times técnicos detentores das fontes e stakeholders de operação para validar regras e modelagem.</p></div>
+    <div class="card"><h4>Ingestão e modelagem de fontes externas</h4><p><b>Risco:</b> Communicare é a fonte pendente mais provável, mas ainda exige confirmação e modelagem; Ploomies, Pardini e DB podem ser downstream ou fontes independentes.</p><p style="margin-top:8px"><b>Mitigação:</b> envolver times técnicos detentores das fontes e stakeholders de operação para validar regras antes de incluir no indicador.</p></div>
     <div class="card"><h4>Migração Oracle para AWS</h4><p><b>Risco:</b> construir sobre ambiente em migração pode gerar retrabalho.</p><p style="margin-top:8px"><b>Mitigação:</b> entender cronograma, estimar esforço de retrabalho e deixar o trade-off claro para os stakeholders.</p></div>
   </div>
 </section>
@@ -408,10 +469,10 @@
 <section class="slide" id="s5">
   <p class="eyebrow"><span class="n">04</span> · Definição do produto</p>
   <h2 class="head">Definição <em>proposta</em></h2>
-  <div class="question"><p class="q">Pergunta</p><p class="t">Definição de "paciente ativo"</p></div>
+  <div class="question"><p class="q">Pergunta</p><p class="t">Definição de "paciente ativo" (proposta inicial)</p></div>
   <div class="split">
     <div class="stack">
-      <div class="card coral"><h3>Paciente ativo</h3><p>Paciente único que teve pelo menos um evento assistencial concluído em fonte confirmada no escopo da v1, dentro da janela de recência aprovada pelos sponsors.</p><ul><li>Medicina: atendimento concluído, exame, procedimento ou sessão realizada.</li><li>Odontologia e Telemedicina: atendimento ou procedimento concluído conforme regra validada na fonte.</li><li>Ploomies, Pardini e DB só entram se forem confirmadas como fontes independentes.</li></ul></div>
+      <div class="card coral"><h3>Paciente ativo</h3><p>Paciente único que teve pelo menos um evento assistencial concluído em fonte confirmada no escopo da v1, dentro da janela de recência aprovada pelos sponsors.</p><ul><li>Medicina: atendimento concluído, exame, procedimento ou sessão realizada.</li><li>Odontologia: atendimento ou procedimento concluído conforme regra validada na fonte.</li><li>Telemedicina entra caso a Communicare seja confirmada e modelada; Ploomies, Pardini e DB só entram se forem fontes independentes.</li></ul></div>
       <div class="note"><b>Identidade e escopo da v1.</b> CPF válido é a chave principal. CPF ausente ou inválido não descarta o registro: aplicamos regras de qualidade com CNS, RG, data de nascimento, nome e nome da mãe, gerando score de confiança para evitar duplicidades. Tentativas de contato, agendamentos, faltosos e cancelados ficam fora da v1.</div>
     </div>
     <div style="margin-top:-12px">
@@ -426,10 +487,11 @@
 <section class="slide" id="s6">
   <p class="eyebrow"><span class="n">05</span> · Fontes de dados</p>
   <h2 class="head">Fontes <em>envolvidas</em></h2>
-  <div class="question"><p class="q">Pergunta</p><p class="t">Quais são as fontes de dados envolvidas?</p></div>
+  <div class="question"><p class="q">Pergunta</p><p class="t">Fontes de dados envolvidas</p></div>
   <div class="row2">
-    <div class="card"><h4>Principais</h4><ul><li>Amei <span class="micro">atendimentos em Medicina</span></li><li>WebDental <span class="micro">atendimentos em Odontologia</span></li><li>Communicare <span class="micro">atendimentos em Telemedicina</span></li></ul></div>
-    <div class="card coral"><h4>A definir downstream</h4><ul><li>Ploomies <span class="micro">validar se AmorCirurgias é downstream do Amei</span></li><li>Pardini <span class="micro">validar se AmorLab é downstream do Amei</span></li><li>DB <span class="micro">validar se AmorLab é downstream do Amei</span></li></ul></div>
+    <div class="card"><h4>Confirmadas no escopo inicial</h4><ul><li>Amei <span class="micro">atendimentos em Medicina</span></li><li>WebDental <span class="micro">atendimentos em Odontologia</span></li></ul></div>
+    <div class="card coral"><h4>Provável, a validar</h4><ul><li>Communicare <span class="micro">Telemedicina; alta chance de entrar, mas depende de confirmação da regra, qualidade e modelagem</span></li></ul></div>
+    <div class="card"><h4>A definir downstream</h4><ul><li>Ploomies <span class="micro">validar se AmorCirurgias é downstream do Amei</span></li><li>Pardini <span class="micro">validar se AmorLab é downstream do Amei</span></li><li>DB <span class="micro">validar se AmorLab é downstream do Amei</span></li></ul></div>
     <div class="card"><h4>Complementares</h4><ul><li>DentalVidas <span class="micro">decisão dos sponsors: assinantes entram como ativos sem atendimento recente?</span></li><li>Cartão de Todos <span class="micro">decisão dos sponsors: identificar ativos com cartão ativo; escopo adicional</span></li></ul></div>
     <div class="card"><h4>Substrato</h4><ul><li>Data Lake <span class="micro">ponto de atenção: migração Oracle para AWS</span></li></ul></div>
   </div>
@@ -439,18 +501,18 @@
 <section class="slide" id="s7">
   <p class="eyebrow"><span class="n">06</span> · Regras de negócio</p>
   <h2 class="head">Alto nível do <em>indicador</em></h2>
-  <div class="question"><p class="q">Pergunta</p><p class="t">Qual lógica transforma os dados brutos em número oficial?</p></div>
+  <div class="question"><p class="q">Pergunta</p><p class="t">Regras de negócio (alto nível)</p></div>
   <div class="rulegrid">
     <div class="rulecard"><h4>Regras do indicador</h4><p class="desc">Critérios para transformar eventos das fontes em pacientes ativos.</p><div class="ruleitem"><b>Evento válido</b><span>Evento assistencial concluído em fonte confirmada: atendimento, exame, procedimento, sessão ou cirurgia realizada dentro da janela aprovada.</span></div><div class="ruleitem"><b>Exclusão v1</b><span>Tentativas de contato, agendamentos, faltosos, cancelamentos e canais de agendamento não aprovados ficam fora.</span></div><div class="ruleitem"><b>Janela de recência</b><span>Período de atividade validado com os sponsors antes da publicação do indicador.</span></div></div>
     <div class="rulecard"><h4>Identidade e qualidade</h4><p class="desc">Critérios para consolidar registros e reduzir duplicidades entre fontes.</p><div class="ruleitem"><b>Chave principal</b><span>CPF válido identifica o paciente único sempre que estiver disponível e confiável.</span></div><div class="ruleitem"><b>CPF inválido</b><span>Não descarta o evento: aciona deduplicação com CNS, RG, data de nascimento, nome e nome da mãe.</span></div><div class="ruleitem"><b>Score de confiança</b><span>Cada match recebe nível de confiabilidade para proteger o número oficial contra duplicidade.</span></div></div>
-    <div class="rulecard"><h4>Decisões pendentes</h4><p class="desc">Definições que podem alterar escopo, recortes ou backlog da primeira versão.</p><div class="ruleitem"><b>Recência e recortes</b><span>Sponsors validam janelas, linhas de serviço e granularidade mínima da v1.</span></div><div class="ruleitem"><b>Canais de agendamento</b><span>CVortex, Portal do Paciente, App do CDT e HubSpot só entram se o conceito aprovado exigir.</span></div><div class="ruleitem"><b>Fontes pendentes</b><span>Ploomies, Pardini e DB dependem de confirmação como downstream ou fontes independentes.</span></div></div>
+    <div class="rulecard"><h4>Decisões pendentes</h4><p class="desc">Definições que podem alterar escopo, recortes ou backlog da primeira versão.</p><div class="ruleitem"><b>Recência e recortes</b><span>Sponsors validam janelas, linhas de serviço e granularidade mínima da v1.</span></div><div class="ruleitem"><b>Canais de agendamento</b><span>CVortex, Portal do Paciente, App do CDT e HubSpot só entram se o conceito aprovado exigir.</span></div><div class="ruleitem"><b>Fontes pendentes</b><span>Communicare é a mais provável; Ploomies, Pardini e DB dependem de confirmação como downstream ou fontes independentes.</span></div></div>
   </div>
 </section>
 
 <section class="slide" id="s8">
   <p class="eyebrow"><span class="n">07</span> · KPIs de sucesso</p>
   <h2 class="head">Como medir o <em>produto</em></h2>
-  <div class="question"><p class="q">Pergunta</p><p class="t">KPIs específicos de sucesso do produto</p></div>
+  <div class="question"><p class="q">Pergunta</p><p class="t">KPIs de sucesso</p></div>
   <div class="kpi-row">
     <div class="card kpi-card"><p class="kpi-num">01 · Adoção</p><h3>Uso da fonte oficial</h3><ul><li>Áreas consumidoras ativas no mês</li><li>Consumos em logs, dashboards, queries, exportações ou integrações</li><li>Rotinas recorrentes usando a fonte oficial por ciclo</li></ul></div>
     <div class="card kpi-card coral"><p class="kpi-num">02 · Qualidade</p><h3>Confiança da base</h3><ul><li>Cobertura das fontes confirmadas</li><li>Percentual de CPF válido e de registros deduplicados</li><li>Registros com score alto de confiabilidade</li></ul></div>
@@ -459,8 +521,25 @@
   <div class="note" style="margin-top:16px"><b>Critério.</b> Área ativa significa pelo menos um consumo registrado da fonte oficial no ciclo. Consumo recorrente significa uso repetido por dashboard, query, exportação, integração ou rotina operacional. Pacientes ativos e cross-sell são métricas servidas pelo produto; estes KPIs medem adoção, confiabilidade e sustentação.</div>
 </section>
 
-<section class="slide" id="s8b">
-  <p class="eyebrow"><span class="n">08</span> · Execução</p>
+<section class="slide" id="s9">
+  <p class="eyebrow"><span class="n">08</span> · Backlog</p>
+  <h2 class="head">Cards do <em>backlog</em></h2>
+  <div class="question"><p class="q">Pergunta</p><p class="t">Monte um backlog com 6 a 10 itens contendo descrição, objetivo e prioridade com justificativa</p></div>
+  <div class="jira-cards-grid">
+    <div class="jira-mini"><p class="jira-key">DATA-12</p><span class="jira-priority p0">P0 · Importância muito alta</span><div class="jira-tags"><span class="jira-tag"><b>Versão</b> v0</span><span class="jira-tag"><b>Épico</b> Discovery</span><span class="jira-tag"><b>Tipo</b> História</span><span class="jira-tag"><b>Resp.</b> DPO</span></div><h4>Pacientes Ativos · Discovery</h4><p><b>Descrição:</b> demanda dos sponsors para criar indicador único de pacientes ativos e reduzir divergências entre áreas.</p><p><b>Objetivo:</b> mapear fontes, donos das regras, qualidade dos dados, riscos, LGPD e escopo mínimo da v1.</p><p><b>Justificativa:</b> evita backlog construído sobre suposições e cria mandato claro para o commit.</p><p class="jira-card-flow"><b>Fluxo:</b> nasce no Upstream e conclui no Upstream.</p></div>
+    <div class="jira-mini"><p class="jira-key">DATA-31</p><span class="jira-priority">P1 · Importância alta</span><div class="jira-tags"><span class="jira-tag"><b>Versão</b> v1</span><span class="jira-tag"><b>Épico</b> Construção</span><span class="jira-tag"><b>Tipo</b> História</span><span class="jira-tag"><b>Resp.</b> Analista Dados</span></div><h4>Fundação e identidade</h4><p><b>Descrição:</b> construção da base inicial de eventos assistenciais usando somente fontes já modeladas.</p><p><b>Objetivo:</b> trabalhar com Amei e WebDental, aplicar CPF como chave principal, de-para e fallback cadastral.</p><p><b>Justificativa:</b> cria alicerce para métrica, confiabilidade e painel sem travar a v1 por fontes não modeladas.</p><p class="jira-card-flow"><b>Fluxo:</b> nasce e conclui no Downstream.</p></div>
+    <div class="jira-mini"><p class="jira-key">DATA-32</p><span class="jira-priority">P1 · Importância alta</span><div class="jira-tags"><span class="jira-tag"><b>Versão</b> v1</span><span class="jira-tag"><b>Épico</b> Construção</span><span class="jira-tag"><b>Tipo</b> História</span><span class="jira-tag"><b>Resp.</b> Analista Dados</span></div><h4>Confiabilidade e métrica</h4><p><b>Descrição:</b> transformação da base de eventos em indicador oficial, com regra e confiança declaradas.</p><p><b>Objetivo:</b> aplicar score de confiabilidade, regra de paciente ativo, janela de recência e números por serviço.</p><p><b>Justificativa:</b> sem essa etapa, o produto segue como tabela técnica e não como métrica oficial.</p><p class="jira-card-flow"><b>Fluxo:</b> nasce e conclui no Downstream.</p></div>
+    <div class="jira-mini"><p class="jira-key">DATA-34</p><span class="jira-priority">P1 · Importância alta</span><div class="jira-tags"><span class="jira-tag"><b>Versão</b> v1</span><span class="jira-tag"><b>Épico</b> Construção</span><span class="jira-tag"><b>Tipo</b> História</span><span class="jira-tag"><b>Resp.</b> Analista Dados</span></div><h4>Painel de saúde</h4><p><b>Descrição:</b> camada de observabilidade do Produto de Dados após a publicação da métrica oficial.</p><p><b>Objetivo:</b> monitorar cobertura, qualidade, frescor, sucesso de carga, SLA e alertas de degradação.</p><p><b>Justificativa:</b> sustenta o produto em produção e identifica problemas antes que as áreas encontrem divergências.</p><p class="jira-card-flow"><b>Fluxo:</b> nasce e conclui no Downstream.</p></div>
+    <div class="jira-mini"><p class="jira-key">DATA-40</p><span class="jira-priority p2">P2 · Importância média</span><div class="jira-tags"><span class="jira-tag"><b>Versão</b> v1</span><span class="jira-tag"><b>Fase</b> Upstream</span><span class="jira-tag"><b>Épico</b> Construção</span><span class="jira-tag"><b>Tipo</b> História</span><span class="jira-tag"><b>Resp.</b> DPO</span></div><h4>Communicare · discovery/refino</h4><p><b>Descrição:</b> mesmo assunto do DATA-40 nasce no upstream para entender regra, qualidade, responsável e viabilidade da fonte.</p><p><b>Objetivo:</b> mapear campos disponíveis, volume, regra de negócio, critérios de aceite e riscos antes do commit técnico.</p><p><b>Justificativa:</b> evita levar para desenvolvimento uma fonte provável, mas ainda sem confirmação completa de regra, qualidade e modelagem.</p><p class="jira-card-flow"><b>Fluxo:</b> nasce no Upstream e conclui no Upstream.</p></div>
+    <div class="jira-mini"><p class="jira-key">DATA-40</p><span class="jira-priority p2">P2 · Importância média</span><div class="jira-tags"><span class="jira-tag"><b>Versão</b> v1</span><span class="jira-tag"><b>Fase</b> Downstream</span><span class="jira-tag"><b>Épico</b> Construção</span><span class="jira-tag"><b>Tipo</b> História</span><span class="jira-tag"><b>Resp.</b> Eng. Dados</span></div><h4>Communicare · modelagem técnica</h4><p><b>Descrição:</b> após o commit do upstream, o mesmo DATA-40 segue para construção da modelagem da Communicare.</p><p><b>Objetivo:</b> transformar dados brutos em eventos assistenciais válidos e integráveis ao Produto de Dados.</p><p><b>Justificativa:</b> preserva a rastreabilidade do mesmo assunto no Jira, da descoberta até a entrega técnica.</p><p class="jira-card-flow"><b>Fluxo:</b> nasce e conclui no Downstream.</p></div>
+    <div class="jira-mini v2"><p class="jira-key">DATA-45</p><span class="jira-priority p2">P2 · Importância média</span><div class="jira-tags"><span class="jira-tag"><b>Versão</b> v2</span><span class="jira-tag"><b>Épico</b> Enriquecimento</span><span class="jira-tag"><b>Tipo</b> História</span><span class="jira-tag"><b>Resp.</b> Eng. Dados</span></div><h4>Consolidação cross-base</h4><p><b>Descrição:</b> evolução para visão consolidada de pacientes únicos entre fontes modeladas e integradas.</p><p><b>Objetivo:</b> cruzar fontes do produto e gerar flags de cross-sell por linha de serviço.</p><p><b>Justificativa:</b> revela oportunidades de venda cruzada hoje invisíveis pela fragmentação cadastral.</p><p class="jira-card-flow"><b>Fluxo:</b> nasce e conclui no Downstream.</p></div>
+    <div class="jira-mini v3"><p class="jira-key">DATA-50</p><span class="jira-priority p3">P3 · Importância baixa</span><div class="jira-tags"><span class="jira-tag"><b>Versão</b> v3</span><span class="jira-tag"><b>Épico</b> Expansão</span><span class="jira-tag"><b>Tipo</b> História</span><span class="jira-tag"><b>Resp.</b> DPO</span></div><h4>Expansão com opt-in</h4><p><b>Descrição:</b> registro da oportunidade de evolução em paralelo ao projeto corporativo de opt-in único.</p><p><b>Objetivo:</b> documentar hipótese, dependências, ganhos esperados e necessidade de mandato para Fase 2.</p><p><b>Justificativa:</b> mantém a oportunidade visível sem bloquear v1 ou v2; o opt-in não é construído por este projeto.</p><p class="jira-card-flow"><b>Fluxo:</b> nasce no Upstream e aguarda mandato da Fase 2.</p></div>
+  </div>
+  <div class="jira-flow-note"><b>Lógica de priorização:</b> P0 remove incerteza e cria mandato; P1 habilita a v1 oficial; P2 amplia cobertura e visão estratégica; P3 depende de Fase 2 e do projeto corporativo de opt-in. <b>Fluxo e conclusão:</b> Entrada → Discovery → Refinamento técnico → Pronto p/ dev → Backlog priorizado → Desenvolvimento → Validação → Concluído. O DATA-40 aparece em dois momentos porque é o mesmo assunto: nasce no Upstream para discovery/refino e, após commit, segue para o Downstream como história técnica de modelagem.</div>
+</section>
+
+<section class="slide spotlight dark" id="s8b">
+  <p class="eyebrow"><span class="n">Extra</span> · Operacionalização no Jira</p>
   <h2 class="head op-head">Operacionalização <em>no Jira</em></h2>
   <p class="op-sub">Upstream refina a demanda; Downstream executa. O commit é a ponte entre os dois.</p>
   <div class="kbflow" data-flow="op">
@@ -492,9 +571,6 @@
   </div>
 </section>
 
-
-
-
 <section class="slide" id="s10">
   <p class="eyebrow"><span class="n">09</span> · Qualidade e governança</p>
   <h2 class="head">Qualidade dos <em>dados</em></h2>
@@ -510,24 +586,24 @@
 <section class="slide" id="s11">
   <p class="eyebrow"><span class="n">10</span> · Qualidade e governança</p>
   <h2 class="head">Conflitos e <em>LGPD</em></h2>
-  <div class="question"><p class="q">Perguntas</p><p class="t">Como tratar conflitos entre áreas e garantir conformidade com a LGPD?</p></div>
+  <div class="question"><p class="q">Perguntas</p><p class="t">Como tratar conflitos entre áreas? Como garantir conformidade com LGPD?</p></div>
   <div class="row4">
     <div class="card"><h4>Alinhamento recorrente</h4><ul><li>Validação a cada fase</li><li>Definições e mudanças de regra validadas antes da publicação</li><li>Reduz surpresa e conflito</li></ul></div>
     <div class="card coral"><h4>Produto único, visões por área</h4><ul><li>Indicador oficial para todos</li><li>Recortes por área sem alterar a regra do indicador</li><li>Mesma fonte para Operações, Marketing e CRM, Estratégia / Financeira</li></ul></div>
     <div class="card"><h4>Governança de decisão</h4><ul><li>Data Product Owner registra definições, versões e trade-offs</li><li>Sponsors validam mudanças de regra</li><li>Conflito vira decisão formal</li></ul></div>
-    <div class="card"><h4>LGPD proporcional ao risco</h4><ul><li>Finalidade definida para uso interno</li><li>Dados de contato com acesso controlado</li><li>Sem compartilhamento externo</li><li>Fase 2 conectada ao opt-in único do grupo</li></ul></div>
+    <div class="card"><h4>LGPD no produto</h4><ul><li>Finalidade documentada para indicador, CRM e atendimento</li><li>Acesso por perfil para e-mail, telefone e dados identificáveis</li><li>Logs de consumo e trilha de auditoria da base oficial</li><li>Revisão jurídica para nova fonte ou novo uso dos dados</li></ul></div>
   </div>
 </section>
 
 <section class="slide" id="s12">
   <p class="eyebrow"><span class="n">11</span> · Comunicação</p>
   <h2 class="head">Resumo <em>executivo</em></h2>
-  <div class="question"><p class="q">Resumo do projeto</p><p class="t">Produto de Dados oficial de Paciente Ativo, com entrega em fases e evolução orientada por governança, cobertura e uso pelas áreas.</p></div>
+  <div class="question"><p class="q">Pergunta</p><p class="t">Elabore um resumo executivo: problema, solução proposta, benefícios esperados e riscos</p></div>
   <div class="row2">
-    <div class="card"><h4>O que é o projeto</h4><p>Estruturar uma fonte oficial para Paciente Ativo, consolidando eventos concluídos, resolvendo identidade do paciente e entregando recortes consistentes para Operações, Marketing e CRM, Atendimento e Estratégia / Financeira.</p></div>
-    <div class="card coral"><h4>V1 · Base oficial governada</h4><p>Entrega inicial com fontes confirmadas, regra de paciente ativo, deduplicação por CPF e identificadores auxiliares, gates de qualidade, logs de consumo, atualização monitorada e visão consumível pelas áreas.</p></div>
-    <div class="card"><h4>V2 · Ampliação de cobertura</h4><p>Inclusão de fontes antes não modeladas, maior cobertura de eventos, enriquecimento de atributos e refinamento do score de confiabilidade, mantendo os controles de governança já presentes desde a V1.</p></div>
-    <div class="card"><h4>Fase 2 / possível V3</h4><p>Evolução em paralelo ao projeto corporativo de opt-in único. O escopo não é construir o opt-in, mas participar da construção e preparar o produto para consumir essa padronização quando disponível.</p></div>
+    <div class="card"><h4>Problema</h4><p>A empresa tem múltiplos sistemas, divergência entre áreas, dados inconsistentes e retrabalho para chegar ao número de pacientes ativos. Isso reduz confiança, atrasa decisões e enfraquece ações de Operação, Marketing, CRM e Estratégia.</p></div>
+    <div class="card coral"><h4>Solução proposta</h4><p>Criar um Produto de Dados oficial e governado. A v1 entrega a base com fontes confirmadas, regra de paciente ativo, deduplicação, qualidade, logs e monitoramento. A v2 amplia cobertura com novas fontes modeladas. A possível v3 participa da padronização do opt-in único e prepara o produto para consumi-la.</p></div>
+    <div class="card"><h4>Benefícios esperados</h4><p>Redução de divergências, fonte única para decisões, segmentações acionáveis por área, base para CRM e atendimento, visão de cross-sell e maior confiança na área de Dados como parceira recorrente do negócio.</p></div>
+    <div class="card"><h4>Riscos</h4><p>CPF inválido, fontes sem modelagem, definição de paciente ativo ainda dependente dos sponsors, migração Oracle para AWS e restrições de LGPD. Mitigaria com discovery, gates de qualidade, decisões versionadas, validação jurídica e entregas por fase.</p></div>
   </div>
   <div class="note" style="margin-top:14px"><b>Síntese:</b> não é um relatório pontual, mas um produto governado, evolutivo e reutilizável para transformar o conceito de paciente ativo em fonte oficial de decisão.</div>
 </section>
@@ -548,7 +624,7 @@
 
 </div>
 <div class="float-tip" id="floatTip" aria-hidden="true"></div>
-<div class="dots" id="dots"></div><div class="counter" id="counter"><b>1</b> / 13</div><div class="nav"><button id="prev" aria-label="Anterior">‹</button><button id="next" aria-label="Próximo">›</button></div><div class="hint" id="hint"><kbd>←</kbd><kbd>→</kbd> navegar · <kbd>F</kbd> tela cheia</div>
+<div class="dots" id="dots"></div><div class="counter" id="counter"><b>1</b> / 14</div><div class="nav"><button id="prev" aria-label="Anterior">‹</button><button id="next" aria-label="Próximo">›</button></div><div class="hint" id="hint"><kbd>←</kbd><kbd>→</kbd> navegar · <kbd>F</kbd> tela cheia</div>
 <script>
 (function(){
   var slides=Array.prototype.slice.call(document.querySelectorAll('.slide'));
@@ -568,9 +644,9 @@
   var DETAIL={
     'discovery':{p:'P0',t:'Discovery de Fontes e Cadastros',d:'1. Com os detentores das fontes, entender as portas de entrada dos pacientes e confirmar as relações entre os sistemas: qual é a fonte de origem e qual apenas herda os dados de outra, e por isso fica fora do v1. 2. Verificar a situação cadastral de cada fonte: se há CPF validado, RG, CNS e afins. 3. Cruzar os CPFs entre as fontes para dimensionar o overlap, ou seja, quantos pacientes se repetem. Discovery enxuto e descartável, uma prova de conceito rápida.',j:'Remover incerteza de escopo, definir os principais stakeholders (detentores das fontes) e ter uma suposição do que precisa para levar aos sponsors.',r:'DPO e Analistas de Dados',e:'Conhecedores das regras de negócio de cada fonte',s:'Mapa de fontes, overlap dimensionado, stakeholders definidos e suposição de escopo para os sponsors.'},
     'validacao':{p:'P0',t:'Validação e mandato',d:'1. Criar o fórum de decisão com os sponsors para definir o que vai ser feito: a definição de paciente ativo, a janela, os recortes e as decisões pendentes. 2. Alinhar o objetivo de cada sponsor e o que será entregue como produto final.',j:'Sem a validação, o produto pode entrar em retrabalho e em conflito de interpretação dos indicadores.',r:'DPO',e:'Diretoria de Operações, Marketing e CRM, Financeira (Projetos e Inteligência de Negócios)',s:'Definição e escopo do v1 aprovados.'},
-    'fundacao':{p:'P1',t:'Fundação e identidade',d:'Construir a camada de eventos (a tabela-motor com os eventos de atendimento) e resolver a identidade do paciente, o de-para de CPF entre as fontes.',j:'Sustenta volume e performance por arquitetura e resolve o paciente único, base de toda a métrica.',r:'Dados e Engenharia',e:'DPO, donos das fontes',s:'Camada de eventos pronta e registros consolidados por paciente.'},
+    'fundacao':{p:'P1',t:'Fundação e identidade',d:'Construir a camada de eventos a partir das fontes já modeladas e resolver a identidade do paciente entre elas.',j:'Sustenta volume e performance por arquitetura e resolve o paciente único, base de toda a métrica.',r:'Dados e Engenharia',e:'DPO, donos das fontes já modeladas',s:'Camada de eventos pronta e registros consolidados por paciente.'},
     'confiabilidade':{p:'P1',t:'Confiabilidade',d:'Calcular o score de confiabilidade por registro e aplicar os gates de qualidade.',j:'Torna a confiança acionável e evita duplicidade.',r:'Dados e Engenharia',e:'DPO',s:'Base com status de confiança por registro.'},
-    'metrica':{p:'P1',t:'Métrica e colunas do v1',d:'Publicar o indicador único, os recortes aprovados e os campos de contato para CRM.',j:'Encerra a divergência de cálculo entre as áreas.',r:'DPO e Engenharia',e:'Operações, Marketing e CRM, Communicare',s:'Fonte oficial disponível para consumo.'},
+    'metrica':{p:'P1',t:'Métrica e colunas do v1',d:'Publicar o indicador único, os recortes aprovados e os campos de contato para CRM.',j:'Encerra a divergência de cálculo entre as áreas.',r:'DPO e Engenharia',e:'Operações, Marketing e CRM, fontes confirmadas',s:'Fonte oficial disponível para consumo.'},
     'saude':{p:'P1',t:'Painel de saúde',d:'Montar o painel de saúde do produto: frescor, qualidade e duplicação. Fecha a Construção, depois que a métrica existe.',j:'Torna o produto auto-observável.',r:'Engenharia',e:'DPO, BI',s:'Painel de saúde no ar.'},
     'ingest-1':{p:'P2',t:'Ingestão · Ingerir',d:'Para cada fonte nova aprovada na validação, ingerir os dados.',j:'Traz as fontes complementares sem travar o v1. Se atrasar, a entrega sai com o que já existe.',r:'Dados e Engenharia',e:'Donos das fontes novas, como a Communicare',s:'Dados da fonte nova ingeridos.'},
     'ingest-2':{p:'P2',t:'Ingestão · Modelar',d:'Modelar e aplicar a regra de negócio da fonte nova.',j:'Deixa a fonte pronta para entrar na mesma régua das demais.',r:'Dados e Engenharia',e:'Conhecedores das regras de negócio da fonte',s:'Fonte modelada com a regra de negócio aplicada.'},
@@ -578,7 +654,7 @@
     'enriquecer':{p:'P2',t:'Enriquecimento',d:'Adicionar atributos ao paciente que já existe: adimplência do Cartão de Todos, status do DentalVidas, limpeza do cadastro do WebDental. Não é fonte nova, é enriquecer quem já está na base.',j:'Eleva o valor da base após o v1. Menos prioritário, vem depois.',r:'Dados e Engenharia',e:'WebDental, DentalVidas, CDT, sponsors',s:'Base enriquecida com novos atributos.'},
     'gov-lgpd':{p:'P1',t:'Governança · Validação jurídica',d:'Validar com o jurídico os riscos de LGPD e resolver as pendências.',j:'Garante a conformidade de LGPD desde cedo.',r:'DPO',e:'Jurídico',s:'Validação jurídica de LGPD.'},
     'gov-final':{p:'P1',t:'Governança · Revalidação',d:'Revalidar com o jurídico as pendências de LGPD que surgirem com as novas fontes e o enriquecimento, antes da expansão.',j:'Mantém a conformidade conforme o produto cresce.',r:'DPO',e:'Jurídico',s:'Conformidade revalidada.'},
-    'optin':{p:'P3',t:'Expansão com opt-in único',d:'Usar o v1 para sustentar a fase 2 de identidade em nível de grupo.',j:'Transforma a dor de cadastro em business case.',r:'DPO',e:'Jurídico VPPR, sponsors, Massullo',s:'Business case para trabalho em nível de grupo.'}
+    'optin':{p:'P3',t:'Expansão com opt-in único',d:'Acompanhar em paralelo o projeto corporativo de opt-in único e preparar o produto para consumir essa padronização quando disponível.',j:'Transforma a dor de cadastro em insumo para uma decisão de grupo sem colocar a construção do opt-in dentro deste projeto.',r:'DPO',e:'Jurídico VPPR, sponsors, Massullo',s:'Dependências e critérios de consumo do opt-in documentados.'}
   };
   function hideDetail(){ if(floatTip){floatTip.classList.remove('show');floatTip.classList.remove('jira-mode');} openFlow=null; Array.prototype.slice.call(document.querySelectorAll('.gbar.sel, .kb-card.sel')).forEach(function(b){b.classList.remove('sel')}); }
   function showDetail(bar){
@@ -738,7 +814,7 @@
         },
         refino:{
           desc:['Discovery concluído, escopo pré-validado com sponsors e LGPD checada com Jurídico VPPR. O DPO senta com o time de Dados e Engenharia para transformar as descobertas em histórias técnicas com critérios de aceitação claros e esforço estimado.'],
-          obj:['Definir regra de identidade: CPF como chave principal com fallback para CNS, RG, nome, data de nascimento e nome da mãe quando CPF estiver ausente ou inválido.','Confirmar fontes do v1: Amei (Medicina), WebDental (Odonto) e Communicare (Telemedicina, dependente de DATA-40) — validar se Ploomies, Pardini e DB entram via Amei ou como fontes independentes.','Criar histórias técnicas no Jira para cada frente: Fundação (DATA-31), Confiabilidade e Métrica (DATA-32), Communicare (DATA-40) e Painel de Saúde (DATA-34).','Definir critérios de aceitação para Fundação: de-para entre fontes com taxa de match mínima, carga sem duplicatas, CPF inválido tratado com score reduzido.','Alinhar com a Área de Dados a dependência da migração Oracle → AWS: construir no ambiente atual com plano de migração incluído no escopo.','Estimar esforço por história com o time e validar que o roadmap de 6 ciclos é viável.'],
+          obj:['Definir regra de identidade: CPF como chave principal com fallback para CNS, RG, nome, data de nascimento e nome da mãe quando CPF estiver ausente ou inválido.','Confirmar fontes já modeladas do v1: Amei (Medicina) e WebDental (Odonto); fontes condicionais, como Communicare, só entram após modelagem e aprovação dos sponsors.','Criar histórias técnicas no Jira para cada frente: Fundação (DATA-31), Confiabilidade e Métrica (DATA-32), fontes não modeladas como Communicare (DATA-40) e Painel de Saúde (DATA-34).','Definir critérios de aceitação para Fundação: de-para entre fontes já modeladas com taxa de match mínima, carga sem duplicatas, CPF inválido tratado com score reduzido.','Alinhar com a Área de Dados a dependência da migração Oracle → AWS: construir no ambiente atual com plano de migração incluído no escopo.','Estimar esforço por história com o time e validar que o roadmap de 6 ciclos é viável.'],
           prio:['P0 Muito Alta — sem refinamento técnico as histórias entram em desenvolvimento sem critério de aceitação: o que é concluído fica em aberto, gerando entregas que precisam ser refeitas e conflito entre DPO e engenharia sobre o que foi pedido.']
         },
         pronto:{
@@ -748,35 +824,35 @@
         }
       }
     },
-    modelar_up:{epic:'Construção',ttl:'Modelagem da Communicare',key:'DATA-40',type:'História',prio:'P2 média',ver:'v1',sp:5,resp:'DPO',
+    modelar_up:{epic:'Construção',ttl:'Communicare · discovery/refino',key:'DATA-40',type:'História',prio:'P2 média',ver:'v1',sp:5,resp:'DPO',
       descBy:{
         entrada:{
-          desc:['No mapeamento de fontes do discovery, identificou-se que a Communicare (telemedicina) pode concentrar eventos assistenciais que não aparecem no Amei. Diferente do Amei e WebDental, a Communicare ainda não tem modelagem de negócio aplicada no Data Lake. A demanda entra no upstream para ser refinada antes de comprometer o desenvolvimento.'],
-          obj:['Registrar a demanda de modelagem da Communicare no Jira.','Identificar o responsável pela fonte e agendar sessão inicial de mapeamento de estrutura.'],
-          prio:['P2 Média — entregável destacado do v1. Se a Communicare não for modelada, toda a base de pacientes de telemedicina fica fora do indicador, criando uma lacuna real no número oficial.']
+          desc:['No mapeamento de fontes do discovery, a Communicare aparece como a fonte pendente mais provável para Telemedicina, mas ainda sem confirmação completa de regra, qualidade e modelagem aplicada no Data Lake.'],
+          obj:['Registrar a demanda de modelagem da Communicare no Jira como fonte provável e condicional.','Identificar o responsável pela fonte e agendar sessão inicial de mapeamento de estrutura.','Usar o aprendizado como referência para outras fontes que também precisem de modelagem antes de entrar no produto.'],
+          prio:['P2 Média — a Communicare tem maior probabilidade de ampliar a cobertura do indicador, mas só deve entrar após regra e qualidade validadas. Isso evita travar a v1 por uma fonte ainda incerta.']
         },
         discovery:{
-          desc:['Sessão de investigação com o responsável pela Communicare para entender a estrutura técnica da fonte antes de qualquer construção.'],
+          desc:['Sessão de investigação com o responsável pela Communicare para entender a estrutura técnica da fonte provável antes de qualquer construção.'],
           obj:['Confirmar que a Communicare não tem camada de regras de negócio no Lake e entender o estado atual dos dados brutos.','Mapear campos disponíveis: CPF (presente? validado?), data do evento, status (concluído/cancelado/agendado), código do profissional, unidade.','Confirmar que pacientes de telemedicina não estão duplicados no Amei ou em outra fonte do v1.','Levantar volume estimado de eventos mensais na Communicare.','Identificar riscos específicos: qualidade do CPF, campos ausentes, frequência de atualização da fonte.','Estimar complexidade de modelagem com o time técnico.'],
-          prio:['P2 Média — a Communicare tem indício de paciente ativo exclusivo nela. O discovery aqui é rápido e barato; não fazê-lo é o risco real de uma modelagem mal feita no downstream.']
+          prio:['P2 Média — a Communicare tem indício de paciente ativo exclusivo nela e é mais provável que as demais pendências. O discovery aqui é rápido e barato; não fazê-lo é o risco real de uma modelagem mal feita no downstream.']
         },
         refino:{
-          desc:['Discovery da Communicare concluído. O DPO refina junto à engenharia o que precisa ser construído para que a fonte entre no v1 com qualidade e sem gerar duplicatas.'],
-          obj:['Definir regra de evento válido na Communicare: atendimento ou procedimento concluído, excluindo tentativas de contato, agendamentos, cancelamentos e faltosos.','Mapear de-para de campos: campo de CPF da Communicare para a chave de identidade do produto, com fallback por CNS/RG/dados cadastrais quando CPF estiver ausente.','Definir critério de aceitação: dados da Communicare integrados ao de-para de identidade sem gerar novas duplicatas com Amei e WebDental.','Estimar esforço de desenvolvimento e validar que a modelagem pode correr em paralelo com a Fundação.'],
-          prio:['P2 Média — o refinamento é o que garante que a Communicare entra no v1 sem retrabalho. Uma modelagem mal especificada atrasa o downstream e contamina o indicador com duplicatas.']
+          desc:['Discovery da Communicare concluído. O DPO refina junto à engenharia o que precisa ser construído para que essa fonte entre no produto com qualidade e sem gerar duplicatas, caso seja aprovada pelos sponsors.'],
+          obj:['Definir regra de evento válido na Communicare: atendimento ou procedimento concluído, excluindo tentativas de contato, agendamentos, cancelamentos e faltosos.','Mapear de-para de campos: campo de CPF da Communicare para a chave de identidade do produto, com fallback por CNS/RG/dados cadastrais quando CPF estiver ausente.','Definir critério de aceitação: dados da Communicare integrados ao produto sem gerar novas duplicatas com Amei e WebDental.','Estimar esforço de desenvolvimento e validar que a modelagem é independente da Fundação e não bloqueia a entrega inicial.'],
+          prio:['P2 Média — o refinamento é o que garante que uma fonte nova entra no produto sem retrabalho. Uma modelagem mal especificada atrasa o downstream e contamina o indicador com duplicatas.']
         },
         pronto:{
-          desc:['Modelagem da Communicare especificada e comprometida. História DATA-40 criada com critérios de aceitação claros e pronta para entrar no downstream como tarefa técnica executável.'],
-          obj:['Confirmar que DATA-40 está no backlog downstream com critérios de aceitação e estimativa.','Garantir que o responsável pela Communicare está disponível para dúvidas durante o desenvolvimento.','Comunicar ao time que a modelagem pode correr em paralelo com Fundação e Confiabilidade.'],
-          prio:['P2 Média — o commit da Communicare libera o downstream para trabalhar sem ambiguidade. Sem ele, o time pode iniciar a modelagem sem critérios claros, arriscando uma entrega que não passa na validação.']
+          desc:['Discovery e refino da Communicare concluídos. O mesmo DATA-40 está pronto para seguir ao downstream como tarefa técnica executável, com critérios de aceitação claros.'],
+          obj:['Confirmar que DATA-40 está no backlog downstream com critérios de aceitação e estimativa.','Garantir que o responsável pela Communicare está disponível para dúvidas durante o desenvolvimento.','Comunicar ao time que a modelagem pode correr em paralelo, sem bloquear Fundação e Confiabilidade.'],
+          prio:['P2 Média — o commit da Communicare libera o downstream para trabalhar sem ambiguidade, se a fonte for aprovada. Sem ele, o time pode iniciar a modelagem sem critérios claros, arriscando uma entrega que não passa na validação.']
         }
       }
     },
     expand:{epic:'Expansão',ttl:'Expansão com opt-in',key:'DATA-50',type:'História',prio:'P3 baixa',ver:'v3',vcls:'v3',sp:8,resp:'DPO',rel:'Relacionado a › DATA-45',
       descBy:{
         entrada:{
-          desc:['Durante o discovery, identificou-se que o problema de cadastro fragmentado entre unidades do grupo é mais amplo do que o escopo do v1. A Fase 2 do projeto, registrada como v3 no roadmap de implementação, poderia incluir um opt-in único em nível de grupo, transformando o problema de cadastro em um business case de identidade do paciente para todo o grupo.'],
-          obj:['Registrar a oportunidade de expansão com opt-in único e documentar as hipóteses levantadas no discovery.','Deixar visível para os sponsors como Fase 2 do projeto e horizonte v3 de implementação, sem interferir no roadmap atual.'],
+          desc:['Durante o discovery, identificou-se que o problema de cadastro fragmentado entre unidades do grupo é mais amplo do que o escopo do v1. A Fase 2 do projeto, registrada como v3 no roadmap de implementação, deve andar em paralelo ao projeto corporativo de opt-in único. Este produto não constrói o opt-in; prepara-se para consumir a padronização quando disponível.'],
+          obj:['Registrar a oportunidade de expansão conectada ao opt-in único e documentar as hipóteses levantadas no discovery.','Deixar visível para os sponsors como Fase 2 do projeto e horizonte v3 de implementação, sem interferir no roadmap atual nem assumir a construção do opt-in.'],
           prio:['P3 Baixa — depende do v1 estar entregue e adotado, e de mandato formal dos sponsors para trabalho em nível de grupo. Não bloqueia nenhuma entrega do roadmap atual. O item existe para não perder a oportunidade de registro.']
         }
       }
@@ -784,9 +860,9 @@
     fund:{epic:'Construção',ttl:'Fundação e identidade',key:'DATA-31',type:'História',prio:'P1 alta',ver:'v1',sp:8,resp:'Analista de Dados',rel:'Bloqueia › DATA-32',
       descBy:{
         backlog:{
-          desc:['Com o commit do discovery concluído e as fontes iniciais confirmadas, a Fundação entra no downstream. A tarefa é modelar a tabela unificada de pacientes ativos a partir de Amei e WebDental, preparando a integração da Communicare quando DATA-40 estiver pronta.'],
-          obj:['Modelar a tabela unificada de eventos assistenciais válidos a partir das fontes confirmadas no Lake: Amei (Medicina) e WebDental (Odonto), deixando a estrutura preparada para Communicare (Telemedicina, dependente de DATA-40). Aplicar as regras de negócio definidas no discovery: evento concluído, CPF como chave principal e de-para entre as fontes.'],
-          prio:['P1 Alta — pré-requisito de Confiabilidade, Métrica e Painel de Saúde. Cada dia de atraso aqui empurra o roadmap inteiro do v1. É a história de maior impacto sequencial.']
+          desc:['Com o commit do discovery concluído e as fontes iniciais confirmadas, a Fundação entra no downstream. A tarefa é modelar a tabela unificada de pacientes ativos somente a partir das fontes já modeladas e disponíveis para uso, como Amei e WebDental.'],
+          obj:['Modelar a tabela unificada de eventos assistenciais válidos a partir das fontes já modeladas e confirmadas no Lake: Amei (Medicina) e WebDental (Odonto). Aplicar as regras de negócio definidas no discovery: evento concluído, CPF como chave principal e de-para entre as fontes.'],
+          prio:['P1 Alta — pré-requisito de Confiabilidade, Métrica e Painel de Saúde. Cada dia de atraso aqui empurra o roadmap inteiro do v1, mas o escopo precisa ficar restrito às fontes já modeladas para não travar a entrega inicial.']
         },
         dev:{
           desc:['Analista de Dados e Desenvolvedor SQL/Python modelando a tabela unificada a partir das fontes já disponíveis no Lake. Critérios de aceitação definidos no refinamento técnico são a referência do que precisa ser entregue.'],
@@ -814,7 +890,7 @@
         },
         dev:{
           desc:['Time de Dados em construção do score de confiabilidade e da lógica de paciente ativo.'],
-          obj:['Implementar score de confiabilidade por registro: CPF validado (alta), CPF ausente com fallback por CNS/RG/dados cadastrais (média), sem identificação suficiente (baixa).','Implementar regra de paciente ativo: evento assistencial concluído em fonte confirmada dentro da janela de recência validada com os sponsors.','Implementar janelas de recência: Quente (até 3m), Morno (3 a 6m), Frio (6 a 12m), Inativo (mais de 12m).','Gerar número oficial de pacientes ativos versionado: total geral e por linha de serviço (Medicina, Odonto, Telemedicina).','Garantir rastreabilidade: cada número gerado deve ser reproduzível com os mesmos parâmetros de entrada.'],
+          obj:['Implementar score de confiabilidade por registro: CPF validado (alta), CPF ausente com fallback por CNS/RG/dados cadastrais (média), sem identificação suficiente (baixa).','Implementar regra de paciente ativo: evento assistencial concluído em fonte confirmada dentro da janela de recência validada com os sponsors.','Implementar janelas de recência: Quente (até 3m), Morno (3 a 6m), Frio (6 a 12m), Inativo (mais de 12m).','Gerar número oficial de pacientes ativos versionado: total geral e por linha de serviço confirmada; Telemedicina entra quando a Communicare for aprovada e modelada.','Garantir rastreabilidade: cada número gerado deve ser reproduzível com os mesmos parâmetros de entrada.'],
           prio:['P1 Alta — a métrica é o entregável central do v1. Cada semana sem um número oficial validado é mais uma semana com divergência entre as áreas e reuniões de reconciliação.']
         },
         val:{
@@ -838,7 +914,7 @@
         },
         dev:{
           desc:['Time de Dados construindo o painel de saúde do produto.'],
-          obj:['Construir visão de pacientes ativos por recência (Quente, Morno, Frio, Inativo) e por linha de serviço (Medicina, Odonto, Telemedicina).','Construir visão de cobertura das fontes: quantos registros vieram de cada sistema na última carga.','Construir visão de qualidade: percentual de CPF inválido por fonte, percentual de registros com score alto/médio/baixo.','Implementar alertas de degradação: carga zerada, queda brusca no número de ativos, aumento anormal de CPF inválido.','Garantir que o painel atualiza conforme o SLA de carga definido com o time.'],
+          obj:['Construir visão de pacientes ativos por recência (Quente, Morno, Frio, Inativo) e por linha de serviço confirmada.','Construir visão de cobertura das fontes: quantos registros vieram de cada sistema na última carga.','Construir visão de qualidade: percentual de CPF inválido por fonte, percentual de registros com score alto/médio/baixo.','Implementar alertas de degradação: carga zerada, queda brusca no número de ativos, aumento anormal de CPF inválido.','Garantir que o painel atualiza conforme o SLA de carga definido com o time.'],
           prio:['P1 Alta — o painel de saúde fecha o v1. É o que transforma o produto em algo sustentável a longo prazo — sem ele, o DPO fica cego para problemas que surgem após a publicação.']
         },
         val:{
@@ -853,16 +929,16 @@
         }
       }
     },
-    modelar:{epic:'Construção',ttl:'Modelar Communicare (completa)',key:'DATA-40',type:'História',prio:'P2 média',ver:'v1',sp:8,resp:'Engenheiro de Dados',rel:'Bloqueia › DATA-45',
+    modelar:{epic:'Construção',ttl:'Communicare · modelagem técnica',key:'DATA-40',type:'História',prio:'P2 média',ver:'v1',sp:8,resp:'Engenheiro de Dados',rel:'Bloqueia › DATA-45',
       descBy:{
         backlog:{
-          desc:['Com o refinamento da Communicare comprometido no upstream (DATA-40), a modelagem entra no downstream pronta para construção. Corre em paralelo com Fundação e Confiabilidade, pois não tem dependência técnica com elas — é um entregável autônomo que será integrado à camada de identidade.'],
-          obj:['Construir a modelagem completa da Communicare no Data Lake: transformar os dados brutos em eventos assistenciais válidos, com os mesmos critérios de qualidade e identidade aplicados ao Amei e WebDental.'],
-          prio:['P2 Média — entregável destacado do v1. A Communicare cobre telemedicina, linha de serviço que não aparece em nenhuma outra fonte. Sem ela, o indicador tem uma lacuna real no número de pacientes ativos.']
+          desc:['Com o refinamento da Communicare comprometido no upstream (DATA-40), a modelagem entra no downstream se os critérios de negócio, qualidade e escopo forem aprovados. A Communicare é a fonte pendente mais provável, mas segue condicional.'],
+          obj:['Construir a modelagem da Communicare no Data Lake: transformar dados brutos em eventos assistenciais válidos, com critérios de qualidade e identidade compatíveis com o produto.'],
+          prio:['P2 Média — entregável destacado porque a Communicare pode cobrir Telemedicina, mas o mesmo padrão pode ser aplicado a outras fontes aprovadas pelos sponsors.']
         },
         dev:{
           desc:['Time de Dados e Engenharia construindo a modelagem e ingestão da Communicare no Data Lake.'],
-          obj:['Aplicar regra de evento válido: atendimento ou procedimento concluído, excluindo tentativas de contato, agendamentos, cancelamentos e faltosos.','Mapear campo de CPF da Communicare para a chave de identidade do produto, com fallback para CNS, RG, data de nascimento, nome e nome da mãe quando CPF estiver ausente.','Integrar registros da Communicare ao de-para de identidade já construído na Fundação.','Garantir que pacientes que aparecem na Communicare e em outra fonte são unificados corretamente, sem duplicatas.','Validar a carga incremental: frequência, volume esperado e tratamento de reprocessamento.'],
+          obj:['Aplicar regra de evento válido: atendimento ou procedimento concluído, excluindo tentativas de contato, agendamentos, cancelamentos e faltosos.','Mapear campo de CPF da Communicare para a chave de identidade do produto, com fallback para CNS, RG, data de nascimento, nome e nome da mãe quando CPF estiver ausente.','Integrar registros da Communicare ao produto respeitando a regra de identidade já definida para as fontes modeladas.','Garantir que pacientes que aparecem na Communicare e em outra fonte são unificados corretamente, sem duplicatas.','Validar a carga incremental: frequência, volume esperado e tratamento de reprocessamento.'],
           prio:['P2 Média — a construção da Communicare não pode gerar duplicatas na base de identidade já validada. É o risco técnico mais alto dessa história.']
         },
         val:{
@@ -871,22 +947,22 @@
           prio:['P2 Média — se a Communicare gerar duplicatas na base, o número oficial de pacientes ativos fica inflado. A validação aqui protege a integridade do indicador já publicado.']
         },
         done:{
-          desc:['Modelagem da Communicare validada e integrada ao produto. Pacientes de telemedicina fazem parte do indicador oficial de pacientes ativos.'],
+          desc:['Modelagem da Communicare validada e integrada ao produto. A partir dessa validação, pacientes de telemedicina passam a fazer parte do indicador oficial de pacientes ativos.'],
           obj:['Confirmar com os sponsors que a Communicare está integrada e que o número de pacientes ativos foi atualizado.','Documentar as regras de mapeamento aplicadas, o volume integrado e as decisões técnicas tomadas.','Atualizar o Painel de Saúde para incluir Communicare na visão de cobertura das fontes.','Mover DATA-45 (Consolidação cross-base) para Em desenvolvimento.'],
-          prio:['P2 Média — a conclusão da Communicare fecha o escopo de fontes do v1 e é o gatilho que libera a Consolidação cross-base.']
+          prio:['P2 Média — a conclusão da Communicare fecha a entrada dessa fonte provável e libera uma consolidação cross-base mais completa.']
         }
       }
     },
     implv2:{epic:'Enriquecimento',ttl:'Consolidação cross-base · Pacientes únicos',key:'DATA-45',type:'História',prio:'P2 média',ver:'v2',vcls:'v2',sp:13,blockedBy:'modelar',resp:'Engenheiro de Dados',rel:'Bloqueado por › DATA-40',
       descBy:{
         backlog:{
-          desc:['Com Amei, WebDental e Communicare integradas e validadas, a Consolidação cross-base entra no downstream. É o passo que transforma três bases independentes em uma visão unificada de pacientes únicos, habilitando a identificação de cross-sell. Bloqueado por DATA-40. Está em backlog desde o início do v1 para garantir visibilidade do roadmap.'],
-          obj:['Construir a lógica de cruzamento entre as três fontes do v1 para identificar pacientes que aparecem em mais de uma linha de serviço — o cross-sell real do grupo.'],
-          prio:['P2 Média — bloqueado por Modelagem da Communicare. Sem as três fontes integradas, o cruzamento seria incompleto e subestimaria o cross-sell real entre linhas de serviço.']
+          desc:['Com fontes adicionais modeladas e validadas, como a Communicare se aprovada, a Consolidação cross-base entra no downstream. É o passo que transforma bases independentes em uma visão unificada de pacientes únicos, habilitando a identificação de cross-sell.'],
+          obj:['Construir a lógica de cruzamento entre fontes confirmadas e modeladas para identificar pacientes que aparecem em mais de uma linha de serviço — o cross-sell real do grupo.'],
+          prio:['P2 Média — depende de fontes adicionais modeladas. Sem essa ampliação, o cruzamento seria incompleto e subestimaria o cross-sell real entre linhas de serviço.']
         },
         dev:{
-          desc:['Time de Dados construindo a consolidação cross-base de pacientes únicos entre as três fontes do v1.'],
-          obj:['Construir lógica de deduplicação final entre Amei, WebDental e Communicare usando a camada de identidade da Fundação.','Gerar flag de cross-sell por paciente: único em uma fonte, ativo em duas, ou ativo nas três linhas de serviço.','Criar segmentações: Medicina + Odonto, Medicina + Telemedicina, Odonto + Telemedicina, Medicina + Odonto + Telemedicina.','Garantir que o número consolidado é consistente com os números publicados por linha de serviço em DATA-32.','Disponibilizar a base consolidada para consumo pelas áreas via Data Lake.'],
+          desc:['Time de Dados construindo a consolidação cross-base de pacientes únicos entre fontes confirmadas e fontes adicionais modeladas.'],
+          obj:['Construir lógica de deduplicação final entre Amei, WebDental e fontes adicionais modeladas, como Communicare, usando a camada de identidade do produto.','Gerar flag de cross-sell por paciente: único em uma fonte, ativo em duas, ou ativo em três ou mais linhas de serviço.','Criar segmentações entre linhas de serviço, como Medicina + Odonto, Medicina + Telemedicina e combinações equivalentes.','Garantir que o número consolidado é consistente com os números publicados por linha de serviço em DATA-32.','Disponibilizar a base consolidada para consumo pelas áreas via Data Lake.'],
           prio:['P2 Média — a visão de cross-sell é uma das métricas estratégicas mais esperadas pelos sponsors: revela oportunidades de venda cruzada entre linhas de serviço que hoje são invisíveis por falta de uma base unificada.']
         },
         val:{
